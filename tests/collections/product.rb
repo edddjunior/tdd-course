@@ -13,4 +13,8 @@ class Product
   def self.all
     @@products
   end
+
+  def self.product_names
+    @@products.map { |product| product.name}
+  end
 end
