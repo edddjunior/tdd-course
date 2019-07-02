@@ -44,4 +44,8 @@ RSpec.describe Product do
 
     expect(Product.products_to_order).to eq([p3])
   end
+
+  it "should return the total inventary value" do
+    expect(Product.price).to eq((3 * 25) + (5 * 15) + (0 * 30))
+  end
 end
