@@ -15,6 +15,7 @@ class Product
   end
 
   def self.product_names
-    @@products.map { |product| product.name}
+    # @@products.map { |product| product.name}
+    @@products.map(&:name)
   end
 end
