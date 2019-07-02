@@ -18,4 +18,10 @@ class Product
     # @@products.map { |product| product.name}
     @@products.map(&:name)
   end
+
+  def self.products_to_order
+    @@products.reject { |product| product.quantity > 0}
+    # is the same as:
+    # @@products.select { |product| product.quantity <= 0}
+  end
 end
