@@ -20,4 +20,11 @@ RSpec.describe Product do
   it "responds to price" do
     expect(@p1).to respond_to(:price)
   end
+
+  it "returns correct attributes" do
+    expect(@p1.id).to eq 1
+    expect(@p1.name).to eq "Item 1"
+    expect(@p1.quantity).to eq 3
+    expect(@p1.price).to eq 25
+  end
 end
