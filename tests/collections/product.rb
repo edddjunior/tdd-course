@@ -24,4 +24,9 @@ class Product
     # is the same as:
     # @@products.select { |product| product.quantity <= 0}
   end
+
+  def self.products_value
+    # This will get the product of the quantity and the price of each element
+    @@products.reduce(0) { |total, product| total + (product.quantity * product.price)}
+  end
 end
