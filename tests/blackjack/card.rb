@@ -16,6 +16,10 @@ class Card
   end
 
   def to_s
-    "#{rank} of #{suit}"
+    if show
+      "#{rank} of #{suit}"
+    else
+      ""
+    end
   end
 end
