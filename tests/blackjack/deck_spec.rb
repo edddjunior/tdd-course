@@ -40,4 +40,13 @@ RSpec.describe Deck do
   it 'ensures that dealt card cannot be nil' do
     expect(@deck.deal_card).not_to eq(nil)
   end
+
+  it "gets a new deck with 'replace_with'" do
+    deck_of_cards = []
+    deck_of_cards.push(Card.new('Clubs', '2'))
+    deck_of_cards.push(Card.new('Clubs', '3'))
+    new_deck = @deck.dup
+    new_deck.replace_with(deck_of_cards)
+    expect(@deck.deck).not_to eq(new_deck.deck)
+  end
 end
