@@ -45,5 +45,7 @@ class Deck
   def add_suit_and_rank(card)
     suit = card.suit
     rank = card.rank
+    @suits.push suit unless @suits.include? suit
+    @ranks.push rank unless @suits.include? rank
   end
 end
