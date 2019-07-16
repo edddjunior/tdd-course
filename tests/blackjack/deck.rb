@@ -22,8 +22,15 @@ class Deck
     @deck.pop
   end
 
-  def replace_with
-    
+  def replace_with(new_deck)
+    @suits = []
+    @ranks = []
+    @deck = new_deck
+
+    new_deck.each do |card|
+      add_suit_and_rank(card)
+    end
+    self
   end
 
   private
@@ -33,5 +40,10 @@ class Deck
         @deck.push(Card.new(suit, rank))
       end
     end
+  end
+
+  def add_suit_and_rank(card)
+    suit = card.suit
+    rank = card.rank
   end
 end
