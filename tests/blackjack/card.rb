@@ -14,4 +14,8 @@ class Card
       @rank = "UNKNOWN"
     end
   end
+
+  def to_s
+    "#{rank} of #{suit}"
+  end
 end
