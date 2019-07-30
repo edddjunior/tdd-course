@@ -1,14 +1,28 @@
 require_relative 'card'
 require_relative 'hand'
 
-card1 = Card.new('Diamonds', 'Ace')
-card2 = Card.new('Clubs', '5')
+puts "Dealer's hand"
+
+card1 = Card.new('Diamonds', 'Jack')
+card2 = Card.new('Clubs', 'Ace')
 
 hand = Hand.new
-
 hand.add_card card1
 hand.add_card card2
 
 value = hand.get_value
-puts value
+puts "Total: #{value}"
+puts hand
+
+puts "Player's hand"
+
+card1 = Card.new('Diamonds', 'Jack')
+card2 = Card.new('Clubs', 'King')
+
+hand = Hand.new
+hand.add_card card1
+hand.add_card card2
+
+value = hand.get_value
+puts "Total: #{value}"
 puts hand
